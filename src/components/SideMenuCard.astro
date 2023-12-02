@@ -1,0 +1,37 @@
+---
+import type { Playlist } from "@/lib/data";
+
+interface Props {
+  playlist: Playlist;
+}
+
+const { playlist } = Astro.props;
+const { id, albumId, title, artists, cover } = playlist;
+
+const strIntlArtists = new Intl.ListFormat("en");
+const strArtists = strIntlArtists.format(artists);
+---
+
+<li class="album-item p-2 rounded-md overflow-hidden hover:bg-back-highlight">
+  <a
+    href={`/playlist/${id}`}
+    class="album-anchor relative flex gap-x-3 gap-y-8"
+  >
+    <picture class="w-12 h-12 flex-none">
+      <img
+        src={cover}
+        class="object-cover w-full h-full rounded-md"
+        alt={`Cover of ${title} by ${strArtists}`}
+      />
+    </picture>
+
+    <div class="flex flex-col gap-y-[2px] items-start truncate">
+      <p class="text-txt-base pointer-events-none leading-normal">{title}</p>
+
+      <div class="w-full max-w-full truncate">
+        <span class="text-sm text-txt-subdued leading-normal">{strArtists}</span
+        >
+      </div>
+    </div>
+  </a>
+</li>

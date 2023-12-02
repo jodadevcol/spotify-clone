@@ -1,5 +1,5 @@
 ---
-import AsideNavigation from "../components/AsideNavigation.astro";
+import AsideNavigation from "@/components/AsideNavigation.astro";
 interface Props {
 	title: string;
 }
@@ -24,12 +24,10 @@ const { title } = Astro.props;
 			</aside>
 
 			<main class="[grid-area:main] rounded-lg overflow-hidden">
-				MAIN de SPOTIFY
+				<slot />
 			</main>
 
 			<footer class="[grid-area:player] rounded-lg">PLAYER</footer>
-
-			<slot />
 		</div>
 	</body>
 </html>
