@@ -8,6 +8,8 @@ export default {
 				"back-highlight": "#1a1a1a",
 				"txt-base": "#fff",
 				"txt-subdued": "#a7a7a7",
+				"essential-positive": "#1ed760",
+				"playlist-item": "hsla(0,0%,100%,.1)",
 
 				// "": "",
 				// --background-press: #000;
