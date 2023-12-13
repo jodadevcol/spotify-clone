@@ -3,6 +3,7 @@ import { colors } from "./colors";
 export interface Playlist {
   id: string;
   albumId: number;
+  favourite: boolean;
   title: string;
   color: (typeof colors)[keyof typeof colors];
   cover: string;
@@ -13,6 +14,7 @@ export const playlists: Playlist[] = [
   {
     id: '1',
     albumId: 1,
+    favourite: true,
     title: "Chill Lo-Fi Music",
     color: colors.yellow,
     cover:
@@ -22,6 +24,7 @@ export const playlists: Playlist[] = [
   {
     id: '2',
     albumId: 2,
+    favourite: true,
     title: "Lo-Fi Chill Session",
     color: colors.green,
     cover:
@@ -31,6 +34,7 @@ export const playlists: Playlist[] = [
   {
     id: '3',
     albumId: 3,
+    favourite: false,
     title: "Study Session",
     color: colors.rose,
     cover:
@@ -40,6 +44,7 @@ export const playlists: Playlist[] = [
   {
     id: '4',
     albumId: 4,
+    favourite: true,
     title: "Blue Note Study Time",
     color: colors.blue,
     cover:
@@ -49,6 +54,7 @@ export const playlists: Playlist[] = [
   {
     id: '5',
     albumId: 5,
+    favourite: false,
     title: "Chau Saura Session",
     color: colors.purple,
     cover:
@@ -58,6 +64,7 @@ export const playlists: Playlist[] = [
   {
     id: '6',
     albumId: 6,
+    favourite: false,
     title: "Like a Necessity",
     color: colors.orange,
     cover:
